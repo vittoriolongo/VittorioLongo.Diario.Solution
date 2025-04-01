@@ -1,4 +1,5 @@
-﻿
+﻿using VittorioLongo.Diario.Entity;
+
 namespace VittorioLongo.Diario.CRUDService
 {
     public class DiarioService : ICRUDService<Entity.Diario, string>

@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Graph" Version="5.75.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VittorioLongo.Diario.DataLayer\VittorioLongo.Diario.DataLayer.csproj" />
+    <ProjectReference Include="..\VittorioLongo.Diario.Entity\VittorioLongo.Diario.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

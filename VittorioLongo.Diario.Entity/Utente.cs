@@ -5,56 +5,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace VittorioLongo.Diario.Entity
 {
     public class Utente
     {
-        private int _utenteID;
-        private string _nomeUtente;
-        private string _password;
-        private string _ruolo;
+        [Column("ID")]
+        public int ID { get; set; }
+        public string NomeUtente { get; private set; }
+        public string Password { get; private set; }
+        public string Ruolo { get; set; }
 
-        public int GetUtenteID()
+        // COSTRUTTORE PRIVATO : Evita la possibilità creazioni dirette
+        private Utente() { }
+
+        // COSTRUTTORE PUBBLICO : Permette a Entity Framework di creare l'oggetto
+        public Utente(string nomeUtente, string passwordHash, string ruolo)
         {
-            return _utenteID;
+            NomeUtente = nomeUtente;
+            Password = passwordHash;
+            Ruolo = ruolo;
         }
 
-        public void SetUtenteID(int utenteID)
+        // UPDATE : Modifica password e user
+        public void Update(string nuovoUser, string nuovaPassword)
         {
-            _utenteID = utenteID;
-        }
-
-        public string GetNomeUtente()
-        {
-            return _nomeUtente;
-        }
-
-        public void SetNomeUtente(string nomeUtente)
-        {
-            _nomeUtente = nomeUtente;
-        }
-
-        public string GetPassword()
-        {
-            return _password;
-        }
-
-        public void SetPassword(string password)
-        {
-            _password = password;
-        }
-
-        public string GetRuolo()
-        {
-            return _ruolo;
-        }
-
-        public void SetRuolo(string ruolo)
-        {
-            _ruolo = ruolo;
+            NomeUtente = nuovoUser;
+            Password = nuovaPassword;
         }
     }
-
 }
-
