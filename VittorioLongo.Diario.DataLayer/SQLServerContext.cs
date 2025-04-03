@@ -1,28 +1,27 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VittorioLongo.Diario.Entity;
 
 namespace VittorioLongo.Diario.DataLayer
 {
+    // CLASSE CONTESTO: Classe per gestire il contesto di connessione al database SQL Server
     public class SQLServerContext : DbContext
     {
+        // COSTRUTTORE: Inizializza il contesto con le opzioni specificate
         public SQLServerContext(DbContextOptions<SQLServerContext> options)
-        : base(options)
+            : base(options)
         {
         }
 
-        public SQLServerContext() { }   
+        // COSTRUTTORE VUOTO: Necessario per alcune operazioni di Entity Framework
+        public SQLServerContext() { }
 
-        public DbSet<Utente> Utenti {  get; set; }
+        // PROPRIETÀ: Rappresenta la tabella Utenti nel database
+        public DbSet<Utente> Utenti { get; set; }
 
+        // CONFIGURAZIONE: Imposta la stringa di connessione al database SQL Server
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
-               @"Server=VITTORIO\SQLEXPRESS; Database=DiarioDBSQLServer; Integrated Security=True; Connect Timeout=30; Encrypt=False;");
+            optionsBuilder.UseSqlServer("Inserire stringa connessione SQLSERVER");
         }
     }
 }

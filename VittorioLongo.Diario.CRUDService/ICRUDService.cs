@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VittorioLongo.Diario.CRUDService
+﻿namespace VittorioLongo.Diario.CRUDService
 {
+    // INTERFACCIA GENERICA: Definisce le operazioni CRUD per qualsiasi entità
     public interface ICRUDService<T, TKey> where T : class
     {
- 
-        void Create(T entity);
-        T GetById(TKey id);
-        IEnumerable<T> GetAll();
-        IEnumerable<T> GetAllByUserID(TKey id);
-        void Update(T entity);  
-        void Delete(TKey id);   
+        void Create(T entity);               // Crea un nuovo elemento
+        T GetById(TKey id);                  // Restituisce un elemento tramite ID
+        IEnumerable<T> GetAll();             // Restituisce tutti gli elementi
+        IEnumerable<T> GetAllByUserID(TKey id); // Restituisce tutti gli elementi di un utente specifico
+        void Update(T entity);               // Aggiorna un elemento esistente
+        void Delete(TKey id);                // Elimina un elemento tramite ID
     }
 }
-
