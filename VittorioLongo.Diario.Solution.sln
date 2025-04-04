@@ -5,17 +5,13 @@ VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.WebApi", "VittorioLongo.Diario.WebApi\VittorioLongo.Diario.WebApi.csproj", "{A7A55A2E-9418-42D0-98BD-21E0182DFFA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diario.BusinessLayer", "VittorioLongo.Diario.BusinessLayer\Diario.BusinessLayer.csproj", "{C4BC67F6-4DDD-435D-950F-439A0345359A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.BusinessLayer", "VittorioLongo.Diario.BusinessLayer\VittorioLongo.Diario.BusinessLayer.csproj", "{C4BC67F6-4DDD-435D-950F-439A0345359A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.Entity", "VittorioLongo.Diario.Entity\VittorioLongo.Diario.Entity.csproj", "{CD3E02C3-5ABE-4138-BD79-1A9AF16E138A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.DataLayer", "VittorioLongo.Diario.DataLayer\VittorioLongo.Diario.DataLayer.csproj", "{97F809CA-5E67-4F33-947E-35DE6797C9A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.Service.Utente", "VittorioLongo.Diario.Service.Utente\VittorioLongo.Diario.Service.Utente.csproj", "{3A4E7352-2102-411B-8AC5-701F9BEBF7D6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.Service.Diario", "VittorioLongo.Diario.Service.Diario\VittorioLongo.Diario.Service.Diario.csproj", "{8B4C8C9C-0731-419F-885A-5315A43E234C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.Service.Amministratore", "VittorioLongo.Diario.Service.Amministratore\VittorioLongo.Diario.Service.Amministratore.csproj", "{7A53ED2A-C51C-4082-A9B0-F85FA83BBC4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VittorioLongo.Diario.CRUDService", "VittorioLongo.Diario.CRUDService\VittorioLongo.Diario.CRUDService.csproj", "{A0AC5C05-5596-4681-B5E5-059B80E5AB08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,18 +35,10 @@ Global
 		{97F809CA-5E67-4F33-947E-35DE6797C9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97F809CA-5E67-4F33-947E-35DE6797C9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97F809CA-5E67-4F33-947E-35DE6797C9A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A4E7352-2102-411B-8AC5-701F9BEBF7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A4E7352-2102-411B-8AC5-701F9BEBF7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A4E7352-2102-411B-8AC5-701F9BEBF7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A4E7352-2102-411B-8AC5-701F9BEBF7D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B4C8C9C-0731-419F-885A-5315A43E234C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B4C8C9C-0731-419F-885A-5315A43E234C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B4C8C9C-0731-419F-885A-5315A43E234C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B4C8C9C-0731-419F-885A-5315A43E234C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A53ED2A-C51C-4082-A9B0-F85FA83BBC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A53ED2A-C51C-4082-A9B0-F85FA83BBC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A53ED2A-C51C-4082-A9B0-F85FA83BBC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A53ED2A-C51C-4082-A9B0-F85FA83BBC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AC5C05-5596-4681-B5E5-059B80E5AB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AC5C05-5596-4681-B5E5-059B80E5AB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AC5C05-5596-4681-B5E5-059B80E5AB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AC5C05-5596-4681-B5E5-059B80E5AB08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
