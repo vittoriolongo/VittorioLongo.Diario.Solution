@@ -5,58 +5,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace VittorioLongo.Diario.Entity
 {
     public class Utente
     {
-        private string _nomeUtente;
-        private string _password;
-        private string _ruolo;
+        [Column("ID")]
+        public int ID { get; set; }
+        public string NomeUtente { get; private set; }
+        public string Password { get; private set; }
+        public string Ruolo { get; set; }
 
-        // Metodo getter per NomeUtente
-        public string GetNomeUtente()
+        // COSTRUTTORE PRIVATO : Evita la possibilità creazioni dirette
+        private Utente() { }
+
+        // COSTRUTTORE PUBBLICO : Permette a Entity Framework di creare l'oggetto
+        public Utente(string nomeUtente, string passwordHash, string ruolo)
         {
-            return _nomeUtente;
+            NomeUtente = nomeUtente;
+            Password = passwordHash;
+            Ruolo = ruolo;
         }
 
-        // Metodo setter per NomeUtente
-        public void SetNomeUtente(string nomeUtente)
+        // UPDATE : Modifica password e user
+        public void Update(string nuovoUser, string nuovaPassword)
         {
-            _nomeUtente = nomeUtente;
+            NomeUtente = nuovoUser;
+            Password = nuovaPassword;
         }
-
-        // Metodo getter per Password
-        public string GetPassword()
-        {
-            return _password;
-        }
-
-        // Metodo setter per Password
-        public void SetPassword(string password)
-        {
-            _password = password;
-        }
-
-        // Metodo getter per Ruolo
-        public string GetRuolo()
-        {
-            return _ruolo;
-        }
-
-        // Metodo setter per Ruolo
-        public void SetRuolo(string ruolo)
-        {
-            _ruolo = ruolo;
-        }
-
-        // Costruttore opzionale
-        /*public Utente(string nomeUtente, string password, string ruolo)
-        {
-            _nomeUtente = nomeUtente;
-            _password = password;
-            _ruolo = ruolo;
-        }*/
     }
 }
-
